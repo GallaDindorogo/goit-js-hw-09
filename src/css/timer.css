@@ -1,0 +1,67 @@
+body {
+  text-align: left;
+  background-color: white;
+  padding: 0 15px;
+}
+
+button {
+  font-size: 20px;
+  padding: 6px 22px;
+  color: white;
+  background-color: #51acb6;
+  cursor: pointer;
+  border: 1px solid #51acb6;
+  border-radius: 4px;
+}
+
+button[disabled] {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  color: #4d4b4b;
+}
+
+#datetime-picker {
+  font-size: 20px;
+  text-align: center;
+  padding: 6px 22px;
+  margin-right: 20px;
+
+  color: #393939;
+  border: 1px solid #51acb6;
+  border-radius: 4px;
+}
+
+#datetime-picker[disabled] {
+  background-color: #cccccc;
+  border-color: #cccccc !important;
+  color: #4d4b4b;
+}
+
+.timer {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.field {
+  font-size: 20px;
+  color: #6e2784;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 22px;
+  min-width: 150px;
+
+  border: 2px solid #51acb6;
+  border-radius: 10px;
+}
+
+.field:not(:last-child) {
+  margin-right: 20px;
+}
+
+.value {
+  font-size: 30px;
+  font-weight: 700;
+}
