@@ -2,6 +2,8 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
+// Form and its inputs
+
 const refs = {
   dateInput: document.querySelector('#datetime-picker'),
   btnStart: document.querySelector('[data-start]'),
@@ -10,6 +12,8 @@ const refs = {
   m: document.querySelector('[data-minutes]'),
   s: document.querySelector('[data-seconds]'),
 };
+
+// flatpickr
 
 let choosenDate = null;
 let timerId = null;
@@ -38,6 +42,8 @@ const options = {
 
 flatpickr('#datetime-picker', options);
 
+// time counter
+
 function timerOn() {
   timerId = setInterval(() => {
     refs.btnStart.setAttribute('disable', true);
@@ -52,12 +58,16 @@ function timerOn() {
   }, 1000);
 }
 
+// upd Timer's tablo
+
 function updTimerInterface({ days, hours, minutes, seconds }) {
   refs.d.textContent = days;
   refs.h.textContent = hours;
   refs.m.textContent = minutes;
   refs.s.textContent = seconds;
 }
+
+//  convert Time's data
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
@@ -79,6 +89,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
+// add first "0"
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
