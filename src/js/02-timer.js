@@ -53,7 +53,7 @@ function timerOn() {
       clearInterval(timerId);
       refs.btnStart.removeAttribute('disable');
     }
-    convertDeltaTime = convertMs(deltaTime);
+    const convertDeltaTime = convertMs(deltaTime);
     updTimerInterface(convertDeltaTime);
   }, 1000);
 }
