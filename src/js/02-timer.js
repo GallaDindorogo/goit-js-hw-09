@@ -24,6 +24,7 @@ const options = {
       Notify.failure('Please choose a date in the future');
       refs.dateInput.style.borderColor = 'red';
       refs.btnStart.setAttribute('disabled', true);
+      return;
     } else {
       choosenDate = selectedDates[0];
       Notify.success('Let"s start!');
